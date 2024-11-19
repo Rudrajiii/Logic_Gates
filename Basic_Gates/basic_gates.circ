@@ -20,7 +20,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
   <lib desc="#Base" name="6">
     <tool name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="font" val="SansSerif bold 18"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -41,7 +41,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="6" name="Edit Tool"/>
     <tool lib="6" name="Text Tool">
       <a name="text" val=""/>
-      <a name="font" val="SansSerif plain 12"/>
+      <a name="font" val="SansSerif bold 18"/>
       <a name="halign" val="center"/>
       <a name="valign" val="base"/>
     </tool>
@@ -188,85 +188,94 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(740,490)" to="(750,490)"/>
     <wire from="(1170,510)" to="(1190,510)"/>
     <wire from="(860,450)" to="(860,500)"/>
-    <comp lib="0" loc="(770,100)" name="Pin">
+    <comp lib="1" loc="(470,870)" name="NAND Gate"/>
+    <comp lib="0" loc="(810,410)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(470,590)" name="NAND Gate"/>
+    <comp lib="6" loc="(423,366)" name="Text">
+      <a name="text" val="A  * (A * B) ^ T"/>
+    </comp>
+    <comp lib="0" loc="(940,770)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(990,590)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(697,805)" name="Text">
+      <a name="text" val="(A + B ) ( A * B ) ^ T"/>
+    </comp>
+    <comp lib="0" loc="(770,240)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="6" loc="(52,747)" name="Text">
       <a name="text" val="A"/>
     </comp>
-    <comp lib="1" loc="(470,590)" name="NAND Gate"/>
-    <comp lib="0" loc="(40,530)" name="Pin">
+    <comp lib="1" loc="(250,330)" name="NAND Gate"/>
+    <comp lib="0" loc="(820,610)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="6" loc="(785,392)" name="Text">
-      <a name="text" val="A"/>
+    <comp lib="6" loc="(433,932)" name="Text">
+      <a name="text" val="(B * ( A * B ) ^ T ) ^ T"/>
     </comp>
-    <comp lib="6" loc="(139,638)" name="Text">
-      <a name="text" val="B * (A * B ) ^ T"/>
+    <comp lib="6" loc="(794,610)" name="Text">
+      <a name="text" val="B"/>
+    </comp>
+    <comp lib="1" loc="(460,410)" name="NAND Gate"/>
+    <comp lib="0" loc="(110,60)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(500,70)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(690,770)" name="NAND Gate"/>
-    <comp lib="6" loc="(466,624)" name="Text">
-      <a name="text" val=" "/>
+    <comp lib="1" loc="(230,510)" name="NAND Gate"/>
+    <comp lib="0" loc="(740,490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(770,350)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(810,410)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(697,805)" name="Text">
-      <a name="text" val="(A + B ) ( A * B ) ^ T"/>
-    </comp>
-    <comp lib="6" loc="(466,904)" name="Text">
-      <a name="text" val=" "/>
+    <comp lib="1" loc="(900,520)" name="NOT Gate"/>
+    <comp lib="1" loc="(970,430)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(320,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(1080,220)" name="OR Gate">
-      <a name="inputs" val="3"/>
+    <comp lib="6" loc="(433,652)" name="Text">
+      <a name="text" val="(B * ( A * B ) ^ T ) ^ T"/>
     </comp>
-    <comp lib="6" loc="(423,366)" name="Text">
-      <a name="text" val="A  * (A * B) ^ T"/>
+    <comp lib="0" loc="(770,350)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="1" loc="(880,220)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(530,260)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(230,790)" name="NAND Gate"/>
-    <comp lib="1" loc="(440,70)" name="NAND Gate"/>
-    <comp lib="1" loc="(470,690)" name="NAND Gate"/>
-    <comp lib="0" loc="(1190,510)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(770,310)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(40,810)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(48,556)" name="Text">
-      <a name="text" val="  B"/>
-    </comp>
     <comp lib="0" loc="(40,500)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(770,200)" name="Pin">
+    <comp lib="1" loc="(230,790)" name="NAND Gate"/>
+    <comp lib="1" loc="(1170,510)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(110,80)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(470,870)" name="NAND Gate"/>
-    <comp lib="6" loc="(52,467)" name="Text">
-      <a name="text" val="A"/>
+    <comp lib="0" loc="(110,200)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(690,490)" name="NAND Gate"/>
+    <comp lib="6" loc="(466,624)" name="Text">
+      <a name="text" val=" "/>
+    </comp>
+    <comp lib="6" loc="(499,660)" name="Text">
+      <a name="text" val="(A * ( A * B ) ^ T) ^ T"/>
+    </comp>
     <comp lib="6" loc="(697,525)" name="Text">
       <a name="text" val="(A + B ) ( A * B ) ^ T"/>
     </comp>
@@ -276,95 +285,90 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="6" loc="(790,561)" name="Text">
       <a name="text" val="A'"/>
     </comp>
-    <comp lib="6" loc="(499,660)" name="Text">
-      <a name="text" val="(A * ( A * B ) ^ T) ^ T"/>
+    <comp lib="1" loc="(1080,220)" name="OR Gate">
+      <a name="inputs" val="3"/>
     </comp>
-    <comp lib="6" loc="(433,932)" name="Text">
-      <a name="text" val="(B * ( A * B ) ^ T ) ^ T"/>
+    <comp lib="0" loc="(770,140)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(1170,510)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
+    <comp lib="1" loc="(270,150)" name="NAND Gate"/>
     <comp lib="1" loc="(880,120)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(40,780)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(250,210)" name="NAND Gate"/>
     <comp lib="6" loc="(783,446)" name="Text">
       <a name="text" val="B'"/>
     </comp>
-    <comp lib="0" loc="(820,610)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="6" loc="(52,467)" name="Text">
+      <a name="text" val="A"/>
     </comp>
-    <comp lib="6" loc="(433,652)" name="Text">
-      <a name="text" val="(B * ( A * B ) ^ T ) ^ T"/>
+    <comp lib="1" loc="(880,330)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(40,810)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(1130,220)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(740,490)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(900,550)" name="NOT Gate"/>
-    <comp lib="1" loc="(850,770)" name="NAND Gate"/>
-    <comp lib="0" loc="(110,60)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(794,610)" name="Text">
-      <a name="text" val="B"/>
-    </comp>
-    <comp lib="0" loc="(770,140)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(260,70)" name="NAND Gate"/>
-    <comp lib="0" loc="(110,200)" name="Pin">
+    <comp lib="0" loc="(120,320)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="6" loc="(139,918)" name="Text">
       <a name="text" val="B * (A * B ) ^ T"/>
     </comp>
-    <comp lib="0" loc="(120,320)" name="Pin">
+    <comp lib="0" loc="(770,100)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(770,200)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(48,556)" name="Text">
+      <a name="text" val="  B"/>
+    </comp>
+    <comp lib="0" loc="(770,310)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="6" loc="(48,836)" name="Text">
       <a name="text" val="  B"/>
     </comp>
-    <comp lib="0" loc="(110,80)" name="Pin">
+    <comp lib="1" loc="(260,70)" name="NAND Gate"/>
+    <comp lib="6" loc="(139,638)" name="Text">
+      <a name="text" val="B * (A * B ) ^ T"/>
+    </comp>
+    <comp lib="0" loc="(40,530)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="1" loc="(970,430)" name="AND Gate">
-      <a name="inputs" val="2"/>
+    <comp lib="1" loc="(250,210)" name="NAND Gate"/>
+    <comp lib="0" loc="(40,780)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(500,70)" name="Pin">
+    <comp lib="6" loc="(927,380)" name="Text">
+      <a name="text" val="XOR Gate Using Basic Gates"/>
+      <a name="font" val="SansSerif bold 18"/>
+    </comp>
+    <comp lib="0" loc="(1190,510)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(940,770)" name="Pin">
+    <comp lib="1" loc="(900,550)" name="NOT Gate"/>
+    <comp lib="1" loc="(470,690)" name="NAND Gate"/>
+    <comp lib="6" loc="(785,392)" name="Text">
+      <a name="text" val="A"/>
+    </comp>
+    <comp lib="0" loc="(530,260)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(770,240)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="1" loc="(230,510)" name="NAND Gate"/>
-    <comp lib="1" loc="(250,330)" name="NAND Gate"/>
-    <comp lib="1" loc="(880,330)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(270,150)" name="NAND Gate"/>
-    <comp lib="1" loc="(900,520)" name="NOT Gate"/>
-    <comp lib="1" loc="(460,410)" name="NAND Gate"/>
-    <comp lib="1" loc="(990,590)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
+    <comp lib="1" loc="(690,490)" name="NAND Gate"/>
     <comp lib="1" loc="(470,260)" name="NAND Gate"/>
+    <comp lib="6" loc="(466,904)" name="Text">
+      <a name="text" val=" "/>
+    </comp>
+    <comp lib="1" loc="(440,70)" name="NAND Gate"/>
+    <comp lib="1" loc="(850,770)" name="NAND Gate"/>
   </circuit>
 </project>
