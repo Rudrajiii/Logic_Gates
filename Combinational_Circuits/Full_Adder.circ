@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0"/>
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="4"/>
+      <a name="value" val="0xf"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -152,8 +162,91 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(500,200)" to="(570,200)"/>
     <wire from="(730,320)" to="(740,320)"/>
     <wire from="(570,200)" to="(580,200)"/>
+    <comp lib="1" loc="(980,580)" name="AND Gate"/>
+    <comp lib="1" loc="(570,630)" name="AND Gate"/>
+    <comp lib="1" loc="(490,580)" name="NOT Gate"/>
+    <comp lib="6" loc="(292,653)" name="Text">
+      <a name="text" val="B"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(570,480)" name="AND Gate"/>
+    <comp lib="0" loc="(100,240)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(490,540)" name="NOT Gate"/>
+    <comp lib="1" loc="(600,860)" name="AND Gate"/>
+    <comp lib="6" loc="(285,463)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(1090,820)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(53,149)" name="Text">
+      <a name="text" val="A"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="6" loc="(580,100)" name="Text">
+      <a name="text" val="                              Carry = A*B + C * ( A (+) B )"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(750,560)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(350,650)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="1" loc="(900,640)" name="NOT Gate"/>
+    <comp lib="6" loc="(1220,779)" name="Text">
+      <a name="text" val="CARRY"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(1160,660)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(275,754)" name="Text">
+      <a name="text" val="C"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="6" loc="(760,43)" name="Text">
+      <a name="text" val="Full-Adder                                            "/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="6" loc="(548,156)" name="Text">
+      <a name="text" val="            SUM"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(500,310)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1220,820)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="1" loc="(290,180)" name="XOR Gate">
       <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(570,200)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(690,320)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(920,800)" name="AND Gate"/>
+    <comp lib="6" loc="(346,121)" name="Text">
+      <a name="text" val="Full-Adder Using 2 XOR &amp; 2 AND &amp; 1 OR Gates!!                    "/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="1" loc="(980,730)" name="AND Gate"/>
+    <comp lib="0" loc="(100,200)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="6" loc="(745,274)" name="Text">
+      <a name="text" val="CARRY"/>
+      <a name="font" val="SansSerif bold 19"/>
     </comp>
     <comp lib="0" loc="(340,460)" name="Pin">
       <a name="tristate" val="false"/>
@@ -163,126 +256,43 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(340,750)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(1231,619)" name="Text">
-      <a name="text" val="SUM"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(980,730)" name="AND Gate"/>
-    <comp lib="6" loc="(292,653)" name="Text">
-      <a name="text" val="B"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="6" loc="(1220,779)" name="Text">
-      <a name="text" val="CARRY"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(1160,660)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(47,250)" name="Text">
-      <a name="text" val="C"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(490,580)" name="NOT Gate"/>
-    <comp lib="6" loc="(346,121)" name="Text">
-      <a name="text" val="Full-Adder Using 2 XOR &amp; 2 AND &amp; 1 OR Gates!!                    "/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(750,560)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(570,200)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(603,74)" name="Text">
-      <a name="text" val="                    Sum = A (+) B (+) C"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="6" loc="(760,43)" name="Text">
-      <a name="text" val="Full-Adder                                            "/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="6" loc="(285,463)" name="Text">
-      <a name="text" val="A"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(490,540)" name="NOT Gate"/>
-    <comp lib="1" loc="(600,860)" name="AND Gate"/>
-    <comp lib="0" loc="(1230,660)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(50,206)" name="Text">
-      <a name="text" val="B"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(920,800)" name="AND Gate"/>
-    <comp lib="6" loc="(275,754)" name="Text">
-      <a name="text" val="C"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
     <comp lib="1" loc="(500,200)" name="XOR Gate">
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(900,680)" name="NOT Gate"/>
-    <comp lib="0" loc="(350,650)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(53,149)" name="Text">
-      <a name="text" val="A"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(980,580)" name="AND Gate"/>
-    <comp lib="1" loc="(350,380)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1220,820)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(690,320)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="1" loc="(570,630)" name="AND Gate"/>
-    <comp lib="1" loc="(900,640)" name="NOT Gate"/>
-    <comp lib="6" loc="(548,156)" name="Text">
-      <a name="text" val="            SUM"/>
-      <a name="font" val="SansSerif bold 19"/>
-    </comp>
-    <comp lib="1" loc="(1090,820)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(745,274)" name="Text">
-      <a name="text" val="CARRY"/>
+    <comp lib="6" loc="(603,74)" name="Text">
+      <a name="text" val="                    Sum = A (+) B (+) C"/>
       <a name="font" val="SansSerif bold 19"/>
     </comp>
     <comp lib="6" loc="(1070,472)" name="Text">
       <a name="text" val="Full-Adder Using 6 AND &amp; 3 OR &amp; 4 OR Gates!!"/>
       <a name="font" val="SansSerif bold 19"/>
     </comp>
-    <comp lib="1" loc="(570,480)" name="AND Gate"/>
-    <comp lib="1" loc="(500,310)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="6" loc="(580,100)" name="Text">
-      <a name="text" val="                              Carry = A*B + C * ( A (+) B )"/>
+    <comp lib="6" loc="(50,206)" name="Text">
+      <a name="text" val="B"/>
       <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="0" loc="(340,750)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(100,160)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(100,240)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="6" loc="(47,250)" name="Text">
+      <a name="text" val="C"/>
+      <a name="font" val="SansSerif bold 19"/>
     </comp>
-    <comp lib="0" loc="(100,200)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="1" loc="(900,680)" name="NOT Gate"/>
+    <comp lib="1" loc="(350,380)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="6" loc="(1231,619)" name="Text">
+      <a name="text" val="SUM"/>
+      <a name="font" val="SansSerif bold 19"/>
+    </comp>
+    <comp lib="0" loc="(1230,660)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
